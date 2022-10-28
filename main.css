@@ -87,6 +87,31 @@ header {
         z-index: 999;
     }
 
+/*1. Root settings*/
+* {
+    margin: 0;
+    font-family: 'roboto', cursive;
+    font-weight: 600;
+    box-sizing: border-box;
+    padding: 0;
+}
+/*2. HTML, body settings*/
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/*3. Navbar settings*/
+header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+}
+
 #brand-name {
     font-size: 3rem;
     font-weight: bold;
