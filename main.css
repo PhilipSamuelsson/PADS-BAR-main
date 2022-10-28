@@ -1,0 +1,115 @@
+/*Settings
+1. Root settings
+2. HTML, body settings
+3. Navbar
+4. Hero section
+5.
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DynaPuff:wght@400;500;600;700&family=Edu+QLD+Beginner:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*1. Root settings*/
+* {
+    margin: 0;
+    font-family: 'roboto', cursive;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+/*2. HTML, body settings*/
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/*3. Navbar settings*/
+header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+}
+
+#brand-name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-left: 1.8rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: azure;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: 0.7s ease;
+    color: azure;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 0 40px 0 15px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+}
+
+/*4. Hero section*/
+.hero-image {
+    background-image: url(img/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+}
+
+.btn {
+    width: 80px;
+    margin-top: 10vh
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+#menu {
+    display: grid;
+    grid-template-areas:
+    "item1 item2 item3"
+    "item4 item5 item6"
+    "item7 item8 item9";
+    padding-top: 100px;
+}
+
+div {
+    border-radius: 5%;
+    background-color:#12343b;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+img {
+    width: 500px;
+    padding: 20px;
+    box-shadow: white 20px;
+}
