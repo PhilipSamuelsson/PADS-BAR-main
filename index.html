@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="homepage.js"></script>
   </head>
   <body>
     <header>
@@ -30,39 +31,31 @@
         </div>
       </nav>
     </header>
+    <!-- HERO SECTION -->
     <div class="hero-image">
-      <div><h2 class="hero-text">BOOK YOUR EXPERIENCE</h2></div>
+      <div>
+        <h2 class="hero-text">BOOK YOUR EXPERIENCE</h2>
+        <a href="#form-section"
+          ><button class="hero-button" id="heroButton">Boka nu!</button>
+        </a>
+      </div>
     </div>
-    <!--     <form></form>
-    <p id="drink1"></p>
-    <img src="" alt="" id="drinkpic1" />
-    <p id="drink2"></p>
-    <img src="" alt="" id="drinkpic2" />
-    <p id="drink3"></p>
-    <img src="" alt="" id="drinkpic3" />
-    <p id="drink4"></p>
-    <img src="" alt="" id="drinkpic4" />
-    <p id="drink5"></p>
-    <img src="" alt="" id="drinkpic5" />
-    <p id="drink6"></p>
-    <img src="" alt="" id="drinkpic6" />
-    <p id="drink7"></p>
-    <img src="" alt="" id="drinkpic7" />
-    <p id="drink8"></p>
-    <img src="" alt="" id="drinkpic8" />
-    <p id="drink9"></p>
-    <img src="" alt="" id="drinkpic9" /> -->
-    <div class="form-section">
+    <!-- BOOKING FORM -->
+    <div class="form-section" id="form-section">
       <form action="" class="form" id="form">
+        <div class="bookedTable">
+          <h2>Du är nu bokad.</h2>
+          <p id="bookingText"></p>
+        </div>
         <h2 class="booking-title">Boka ett bord!</h2>
         <label for="name">Förnamn</label>
         <input type="text" id="name" placeholder="Philip" />
         <label for="lastName">Efternamn</label>
         <input type="text" id="lastName" placeholder="Samuelsson" />
         <label for="seats">Bord för:</label>
-        <input type="number" placeholder="2" />
+        <input type="number" id="seats" placeholder="2" />
         <label for="date">Vilken dag passar er?</label>
-        <input type="date" />
+        <input type="date" id="date" />
         <label for="time">Lediga bord</label>
         <select name="time" id="time">
           <option value="16:30"></option>
