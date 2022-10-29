@@ -310,4 +310,15 @@ label {
 
 .bookedTable {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100vh;
+    height: 40rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background-color: lightgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
 }

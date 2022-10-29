@@ -48,14 +48,15 @@ let submit = document.querySelector('#submit')
 let bookedSection = document.querySelector('.bookedTable')
 let bookingText = document.querySelector('#bookingText')
 
-submit.addEventListener("click", function() {
+submit.addEventListener("click", function(event) {
+    event.preventDefault()
     console.log('hej')
     localStorage.setItem('firstName',firstName.value)
     localStorage.setItem('lastName', lastName.value)
     localStorage.setItem('seats',seats.value)
-    localStorage.setItem('date', data.value)
+    localStorage.setItem('date', date.value)
     localStorage.setItem('time', time.value)
-
-
-   /*  bookingText.innertext = `Välkommen till oss ${firstName.value} ${lastName.value}! Du har ett bord för ${seats.value} ${date} klockan ${time.value}` */
+    form.style.display='none'
+    bookedSection.style.display='flex'
+    bookingText.innertext = `Välkommen till oss ${firstName.value} ${lastName.value}! Du har ett bord för ${seats.value} ${date} klockan ${time.value}`
 })
