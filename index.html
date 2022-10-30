@@ -43,10 +43,6 @@
     <!-- BOOKING FORM -->
     <div class="form-section" id="form-section">
       <form action="" class="form" id="form">
-        <div class="bookedTable">
-          <h2>Du är nu bokad.</h2>
-          <p id="bookingText"></p>
-        </div>
         <h2 class="booking-title">Boka ett bord!</h2>
         <label for="name">Förnamn</label>
         <input type="text" id="name" placeholder="Philip" />
@@ -65,9 +61,27 @@
           <option value="19:00">19:00</option>
           <option value="20:00">20:00</option>
         </select>
-        <button class="submit" id="submit" type="submit">Boka!</button>
+        <button
+          data-modal-target="#modal"
+          class="submit"
+          id="submit"
+          type="submit"
+        >
+          Boka!
+        </button>
       </form>
     </div>
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modalHeader" id="modalHeader">
+        <div class="headerText"><h3 id="headerText">Du är nu bokad!</h3></div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="bookingText"></p>
+      </div>
+    </div>
+    <div id="overlay"></div>
     <footer>
       <div class="footer"></div>
     </footer>

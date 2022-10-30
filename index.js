@@ -56,7 +56,37 @@ submit.addEventListener("click", function(event) {
     localStorage.setItem('seats',seats.value)
     localStorage.setItem('date', date.value)
     localStorage.setItem('time', time.value)
-    form.style.display='none'
-    bookedSection.style.display='flex'
-    bookingText.innertext = `Välkommen till oss ${firstName.value} ${lastName.value}! Du har ett bord för ${seats.value} ${date} klockan ${time.value}`
+    console.log('hej')
+    bookingText.innerHTML = `Välkommen till oss ${firstName.value} ${lastName.value}!<br> Du har ett bord för ${seats.value}<br> datum: ${date.value}<br> klockan: ${time.value}`
 })
+
+/* MODAL */
+const modalButton = document.querySelector('[data-modal-target]')
+const closeButton = document.querySelector('[data-close-button]')
+const overlay = document.querySelector('#overlay')
+
+modalButton.addEventListener('click', function() {
+const modal = document.querySelector('#modal')
+openModal(modal)
+})
+
+closeButton.addEventListener('click', function() {
+    const modal = document.querySelector('#modal')
+    closeModal(modal)
+    })
+
+function openModal(modal) {
+if (modal == null) return
+modal.classList.add('active')
+overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+    }
+
+    overlay.addEventListener('click', function() {
+        closeModal(modal)
+    })
