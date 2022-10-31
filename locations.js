@@ -43,3 +43,4 @@ yourName.addEventListener('keydown', (event) => {
         localStorage.setItem('yourName', yourName.value);
         localStorage.setItem('text', text.value);
      })
+     console.log("hai")
