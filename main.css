@@ -42,7 +42,7 @@ header {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.8s ease-in-out;
-    background-color: green;
+    background-color: black;
   }
 
 
@@ -69,13 +69,15 @@ header {
         left: 0;
         gap: 0;
         flex-direction: column;
-        background-color: black;
+        background-color: none;
         width: 100%;
         text-align: center;
         transition: 0.3s;
         margin: 0;
         display: none;
         height: 100vh;
+        opacity: 1;
+        height: 140px;
     }
 
     .nav-item {
@@ -127,11 +129,18 @@ header {
 
 .nav-link {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     transition: 0.7s ease;
     /* color: #546D64; */
-    color: black;
-    -webkit-text-stroke: 1px #546D64;
+    color: white;
+    -webkit-text-stroke:black 1px;
+    font-family: 'permanent marker';
+    letter-spacing: 5px;
+}
+.nav-link:hover {
+    text-decoration: underline;
+    color: white;
+    font-size: 1.75rem;
 }
 
 .navbar {
@@ -222,7 +231,8 @@ img {
 }
 
 body {
-    background-color: #546D64;
+    background: rgb(110,110,110);
+background: linear-gradient(218deg, rgba(110,110,110,1) 0%, rgba(102,110,108,1) 41%, rgba(84,109,102,1) 100%);
 }
 
 .form-section {
@@ -267,12 +277,6 @@ label {
     margin: auto;
     padding-bottom: 0px;
     margin-bottom: 0px;
-}
-
-.footer {
-    height: 500px;
-    width: 100%;
-    background-color: blue;
 }
 
 .submit {
@@ -397,3 +401,31 @@ opacity: 1;
     margin: auto;
     color: black;
 }
+
+/* FOOTER */
+
+footer {
+    border-top: 2px solid black;
+    background-color:
+}
+
+.footer {
+    height: 300px;
+    width: 100%;
+    background-color: #191919;
+    display: grid;
+    grid-template-areas:
+    "grid1 grid2 grid3";
+    align-items: center;
+    padding-left: 450px;
+    color:white}
+
+    li{
+list-style: none;
+line-height: 25px;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
