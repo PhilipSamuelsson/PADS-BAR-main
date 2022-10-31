@@ -407,7 +407,6 @@ opacity: 1;
 
 footer {
     border-top: 2px solid black;
-    background-color:
 }
 
 .footer {
@@ -429,4 +428,15 @@ line-height: 25px;
     h4 {
         font-size: 1.5rem;
         margin-bottom: 30px;
+    }
+
+    .locations {
+        height: 500px;
+        width: 100%;
+        border: 5px red solid;
+        display: grid;
+        grid-template-areas:
+        "city1 city2"
+        "city3 city4"
+        "city5 city6";
     }

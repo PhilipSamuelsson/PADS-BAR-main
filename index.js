@@ -90,3 +90,21 @@ function closeModal(modal) {
     overlay.addEventListener('click', function() {
         closeModal(modal)
     })
+
+        /* LOCATIONS */
+
+let getLocations = () => {
+    fetch('https://avancera.app/cities/')
+    .then (response => response.json())
+    .then (data => {
+    citiesArray = data
+        console.log('hej')
+        document.getElementsByClassName('city1').innerHTML = citiesArray[0].name
+        document.getElementsByClassName('city2').innerHTML = citiesArray[1].name
+        document.getElementsByClassName('city3').innerHTML = citiesArray[2].name
+        document.getElementsByClassName('city4').innerHTML = citiesArray[3].name
+        document.getElementsByClassName('city5').innerHTML = citiesArray[4].name
+        document.getElementsByClassName('city6').innerHTML = citiesArray[5].name
+        })
+    }
+    getLocations()
