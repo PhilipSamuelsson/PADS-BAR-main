@@ -46,33 +46,46 @@ console.log(data)
 })
 
 /*Formulär recensioner*/
-let form2 = document.querySelector("#form2");
+let form2 = document.querySelector(".form2");
 let anonym = document.querySelector(".opt");
-let sub = document.querySelector(".sub");
-let text = document.querySelector(".text");
+let post = document.querySelector(".post");
+let comment = document.querySelector(".comment");
 let yourName = document.querySelector(".your-name");
-sub.disabled = true;
+post.disabled = true;
 
 
 anonym.addEventListener('click', () => {
     if (anonym.checked == true) {
-        sub.disabled = false;
+        post.disabled = false;
     } else {
-        sub.disabled = true;
+        post.disabled = true;
     }
 })
 yourName.addEventListener('keydown', (event) => {
     let key = event.key;
-    sub.disabled = true;
+    post.disabled = true;
     if (yourName.value.length === 1 && key == "Backspace") {
-    sub.disabled = true;
+    post.disabled = true;
    } else {
-     sub.disabled = false;
+     post.disabled = false;
      }})
 
 
-     form2.addEventListener('submit', (event) => {
+      form2.addEventListener('submit', (event) => {
         event.preventDefault();
         localStorage.setItem('yourName', yourName.value);
-        localStorage.setItem('text', text.value);
+        localStorage.setItem('comment', comment.value);
      })
+
+    post.addEventListener('click', () => {
+        let commentBox = document.querySelector(".comment").value;
+        let div = document.createElement("div");
+        let text = document.createTextNode(commentBox);
+        div.appendChild(text);
+        document.querySelector("#comments").appendChild(div);
+        if (anonym.checked == false) {
+        div.innerHTML = `${yourName.value}: ${comment.value}`
+        } else {
+            div.innerHTML = `Anonym: ${comment.value}`
+        }
+    })
