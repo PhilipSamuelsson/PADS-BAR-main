@@ -1,6 +1,6 @@
     /* LOCATIONS */
 
-  city1 = document.getElementsByClassName('city1')
+/*   city1 = document.getElementsByClassName('city1')
       city2 = document.getElementsByClassName('city2')
             city3 = document.getElementsByClassName('city3')
             city4 = document.getElementsByClassName('city4')
@@ -20,20 +20,27 @@
             city5.innerHTML = citiesArray[4].name
             city6.innerHTML = citiesArray[5].name
             })
-        }
-getLocations()
+        } */
+/* getLocations() */
      console.log("hai")
 
      fetch(`https://avancera.app/cities/`)
 .then (response => response.json())
 .then (data => {
-    for(let i = 0; i < 12; i++) {
-     document.querySelector(".city1").innerHTML = data[i].name;
+    for(let i = 0; i < 3; i++) {
+     document.querySelector(".city1").innerHTML = data[2].name;
 
         let c = data[i].name;
         data.push(c);
+        console.log(c)
+        console.log(data[0].name)
+
+        document.querySelector(".city1").innerHTML = data[0].name;
+        document.querySelector(".city2").innerHTML = data[1].name;
+        document.querySelector(".city3").innerHTML = data[2].name;
 
 }
+
 console.log(data)
 
 })

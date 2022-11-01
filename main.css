@@ -429,14 +429,38 @@ line-height: 25px;
         font-size: 1.5rem;
         margin-bottom: 30px;
     }
-
+/* Locations */
     .locations {
-        height: 500px;
+        height: 1500px;
         width: 100%;
         border: 5px red solid;
         display: grid;
         grid-template-areas:
         "city1 city2"
-        "city3 city4"
-        "city5 city6";
+        "city3 city4";
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .locations div {
+        width: 500px;
+        height: 500px;
+        margin-left: 250px;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .locations div img {
+        width: 400px;
+        height: 400px;
+        border-radius: 50px;
+        box-shadow: black 2px;
+
+    }
+
+    .locations div h3 {
+        font-size: 3rem;
+        font-family: 'permanent marker';
+        text-decoration: underline;
     }
