@@ -469,9 +469,11 @@ line-height: 25px;
     /* Change city */
 
     .change {
-        margin-right: 500px;
         justify-content: center;
         text-align: center;
+        background-color: red;
+        margin: auto;
+        width: 60%;
     }
     .change input{
         margin-left: 130px;
@@ -494,7 +496,7 @@ line-height: 25px;
         border-radius: 10px;
         border-style: none;
 
-    }
+    } */
 
     .location-title {
         text-align: center;
@@ -524,4 +526,20 @@ line-height: 25px;
         border-style: none;
         text-align: center;
 
+    }
+
+    /* TABLE SECTION */
+
+    .table {
+        margin: auto;
+        width: 60%;
+        margin-top: 100px;
+    }
+
+    .table-section {
+        height: 120vh;
+    }
+
+    .id {
+        width: 50%
     }
