@@ -120,7 +120,14 @@
     </div>
 
     <div class="change"> <p>Vill ni ta bort, flytta eller att vi öppnar en ny bar i er stad? Vänligen fyll i er stad i formuläret nedan</p>
-      <input type="text" id="change" class="change" placeholder="Stad">
+      <label for="change">Namn</label>
+      <br>
+      <input type="text" id="change" class="cityName" placeholder="Stad">
+      <br>
+      <label for="idInput">ID</label>
+      <br>
+      <input type="text" id="idInput" class="idInput" placeholder="ID">
+      <br>
       <select name="method" id="method">
         <option value="post">Lägg till</option>
         <option value="patch">ändra</option>

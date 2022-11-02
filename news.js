@@ -19,3 +19,42 @@ for (let k = 0; k < result.length; k++) {
 }
 
 upcoming()
+
+
+/* POST, PATCH AND DELETE */
+
+let cityNameInput = document.querySelector('.cityName');
+let cityIdInput = document.querySelector('#idInput');
+let cityButton = document.querySelector('.submit-city');
+let method = document.querySelector('#method')
+
+cityButton.addEventListener('click', function() {
+  if (method.value === 'post') {
+  fetch('https://avancera.app/cities/', {
+    body: JSON.stringify({ name: cityNameInput.value, population: 123 }),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    method: 'POST'
+  })
+
+  }
+  else if (method.value === 'patch') {
+    fetch('https://avancera.app/cities/' + cityIdInput.value, {
+      body: JSON.stringify({ name: cityNameInput.value, population: 123 }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'PATCH'
+    })
+  }
+  else if (method.value === 'remove') {
+    fetch('https://avancera.app/cities/' + cityIdInput.value, {
+    method: 'DELETE'
+})
+  }
+
+  upcoming()
+
+
+})
