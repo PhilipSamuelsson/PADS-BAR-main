@@ -551,3 +551,21 @@ line-height: 25px;
     .id {
         width: 50%
     }
+
+    /*CHART*/
+
+    .chart {
+        width: 500px;
+        height: 500px;
+    }
+
+    #mychart {
+        z-index: 999;
+    }
+
+    .avg {
+        display: inline;
+    }
+    i {
+        font-size: 1rem;
+    }

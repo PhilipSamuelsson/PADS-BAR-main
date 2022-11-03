@@ -51,6 +51,7 @@ let anonym = document.querySelector(".opt");
 let post = document.querySelector(".post");
 let comment = document.querySelector(".comment");
 let yourName = document.querySelector(".your-name");
+let comments = document.querySelector("#comments");
 post.disabled = true;
 
 
@@ -70,11 +71,24 @@ yourName.addEventListener('keydown', (event) => {
      post.disabled = false;
      }})
 
+/*      comment.addEventListener('keydown', () => {
+        if (comment.value.length > 0){
+            post.disabled = false
+        } else {
+            post.disabled = true;
+        }
+     }) */
 
       form2.addEventListener('submit', (event) => {
         event.preventDefault();
         localStorage.setItem('yourName', yourName.value);
         localStorage.setItem('comment', comment.value);
+        yourName.value = '';
+        comment.value = '';
+        anonym.checked = false;
+        localStorage.setItem('comments', comments.value);
+        comments.value.innerHTML = localStorage.getItem('comments')
+
      })
 
     post.addEventListener('click', () => {
@@ -84,8 +98,19 @@ yourName.addEventListener('keydown', (event) => {
         div.appendChild(text);
         document.querySelector("#comments").appendChild(div);
         if (anonym.checked == false) {
-        div.innerHTML = `${yourName.value}: ${comment.value}`
+        div.innerHTML = `${yourName.value}:<br> ${comment.value}`
         } else {
             div.innerHTML = `Anonym: ${comment.value}`
         }
+
     })
+
+/*     let showInput = () => {
+        let usersInput = document.querySelector(".comment").value;
+        setDataToLocalStorage(usersInput);
+        document.querySelector("#comments").innerHTML = usersInput;
+    }
+    showInput(); */
+/*
+    localStorage.getItem('yourName');
+    console.log(localStorage.getItem('yourName')); */

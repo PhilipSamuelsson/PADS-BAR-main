@@ -1,0 +1,22 @@
+[
+    {
+        "name": "oneStar",
+        "value": 8
+    },
+    {
+        "name": "twoStar",
+        "value": 4
+    },
+    {
+        "name": "threeStar",
+        "value": 37
+    },
+    {
+        "name": "fourStar",
+        "value": 42
+    },
+    {
+        "name": "fiveStar",
+        "value": 88
+    }
+]
