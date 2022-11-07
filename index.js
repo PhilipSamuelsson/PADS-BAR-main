@@ -58,6 +58,7 @@ submit.addEventListener("click", function(event) {
     localStorage.setItem('time', time.value)
     console.log('hej')
     bookingText.innerHTML = `Välkommen till oss ${firstName.value} ${lastName.value}!<br> Du har ett bord för ${seats.value}<br> datum: ${date.value}<br> klockan: ${time.value}`
+    document.querySelector('.welcome').innerHTML = `Välkommen tillbaka ${user}!`
 })
 
 /* MODAL */
@@ -108,3 +109,16 @@ let getLocations = () => {
         })
     }
     getLocations()
+
+
+/* WEB STORAGE WELCOME */
+const welcome = document.querySelector('.welcome')
+let user = localStorage.getItem('firstName')
+if (user === null) {
+    welcome.style.display = 'none'
+}
+else {
+    welcome.style.display = 'block'
+}
+
+welcome.innerHTML = `Välkommen tillbaka ${user}!`

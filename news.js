@@ -37,7 +37,6 @@ cityButton.addEventListener('click', function() {
     },
     method: 'POST'
   })
-
   }
   else if (method.value === 'patch') {
     fetch('https://avancera.app/cities/' + cityIdInput.value, {
