@@ -7,7 +7,7 @@ fetch('https://avancera.app/cities/')
     let allidcells = document.querySelectorAll('.id')
     let allUvCells = document.querySelectorAll('.upvotes')
     for (let i = 0; i < result.length; i++) {
-      allCells[i].textContent = result[i].name
+      allCells[i].innerHTML = result[i].name
     }
     for (let j = 0; j < result.length; j++) {
     allidcells[j].textContent =  result[j].id
