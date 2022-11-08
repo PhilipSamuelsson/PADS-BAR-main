@@ -417,8 +417,10 @@ footer {
     grid-template-areas:
     "grid1 grid2 grid3";
     align-items: center;
-    padding-left: 450px;
-    color:white}
+     /* padding-left: 100px; */
+    color:white;
+    text-align: center;
+}
 
     li{
 list-style: none;
@@ -429,6 +431,27 @@ line-height: 25px;
         font-size: 1.5rem;
         margin-bottom: 30px;
     }
+
+    .grid1, .grid2, .grid3 {
+        width: 100%;
+    margin: auto;
+
+    }
+    .grid1 {
+        width: 65%;
+    }
+.grid2 li a{
+    text-decoration: none;
+    color: white;
+}
+
+.grid3 i {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: white;
+}
+
+
 /* Locations */
 .location-title {
     text-align: center;
@@ -438,9 +461,8 @@ line-height: 25px;
 }
 
     .locations {
-        height: 1500px;
+        /* height: 1500px; */
         width: 100%;
-        border: 5px red solid;
         display: grid;
         grid-template-areas:
         "city1 city2"
@@ -449,6 +471,7 @@ line-height: 25px;
         flex-wrap: wrap;
         justify-content: center;
         padding-top: 200px;
+        padding-bottom: 200px;
 
     }
 
@@ -561,13 +584,11 @@ line-height: 25px;
 
     /*CHART*/
 
-    .chart {
-        width: 500px;
-        height: 500px;
-    }
+
 
     #mychart {
         z-index: 999;
+        color: white;
     }
 
     .avg {
@@ -576,6 +597,7 @@ line-height: 25px;
     i {
         font-size: 1rem;
     }
+
 
     /* WEB STORAGE WELCOME */
 
@@ -589,10 +611,51 @@ line-height: 25px;
         font-size: 50px;
     }
 
-    /* Comments */
+    /* Comment form */
+    .form2 {
+    }
     .comment-title {
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 50px;
         text-decoration: none;
-        border: 1px solid red;
+        border-top: 50px solid black;
+        text-align: center;
+        padding: 0.5rem 1rem;
     }
+
+    #comments {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form2-2 {
+        text-align: center;
+        background-color: grey;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .post {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    }
+
+    .your-name {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 1rem;
+        border-radius: 10px;
+        border: none;
+
+    }
+
+    .comment {
+        margin-top: 1rem;
+    }
+
+    /*Chart*/
+
+/*     #myChart {
+        width: 25%;
+    } */

@@ -84,25 +84,41 @@
     <div id="overlay"></div>
     <footer>
       <div class="footer">
-        <ul class="grid1">
-          <h4>Sidor</h4>
-          <li>Hem</li>
-          <li>Meny</li>
-          <li>Våra barer</li>
-          <li>Om oss</li>
-          <li>Kontakt</li>
-        </ul>
+        <div class="grid1">
+          <canvas id="myChart"></canvas>
+
+          <div class="stars">
+            <p class="avg"></p>
+            <i class="fa-solid fa-star star"></i>
+          </div>
+        </div>
         <ul class="grid2">
-          <li></li>
+          <h4>Sidor</h4>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="locations.html">Våra barer</a></li>
+          <li><a href="news.html">Nyheter</a></li>
         </ul>
+
         <ul class="grid3">
           <h4>Sociala medier</h4>
-          <li>Instagram</li>
-          <li>Facebook</li>
-          <li>TikTok</li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
         </ul>
       </div>
+      <script
+        src="https://kit.fontawesome.com/402149f8c2.js"
+        crossorigin="anonymous"
+      ></script>
     </footer>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2a7819863f.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
