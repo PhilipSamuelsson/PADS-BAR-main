@@ -177,6 +177,7 @@ header {
 /*Menu-sidan*/
 .sub-hero-text {
     background-color: #546D64;
+    height: 70vh;
 }
 h2 {
     padding-top: 15vh;
@@ -202,7 +203,6 @@ h2 {
 .btns {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 26.5vh;
 
 }
 
