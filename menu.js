@@ -86,13 +86,18 @@ let alcoholic = () => {
     let btn1 = document.querySelector("#alcoholic");
 
     btn1.addEventListener('click', () => {
+        let btns = document.querySelector(".sub-hero-text");
+        btns.style.height = "30vh";
         menu.style.display = 'grid'
         alcoholic()
+
     })
 
     let btn2 = document.querySelector("#non-alcoholic");
 
     btn2.addEventListener('click', () => {
+        let btns = document.querySelector(".sub-hero-text");
+        btns.style.height = "30vh";
         menu.style.display = 'grid'
         nonAlcoholic()
 

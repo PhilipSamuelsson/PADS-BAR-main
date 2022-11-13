@@ -118,7 +118,7 @@ yourName.addEventListener('keydown', (event) => {
     let oldName = localStorage.getItem('yourName', yourName.value);
     let oldComment = localStorage.getItem('comment');
     let lastComment = document.querySelector(".lastComment");
-    lastComment.innerHTML = `Senaste kommentaren:<br>"${oldComment}"<br>-${oldName}`;
+    lastComment.innerHTML = `Senaste kommentaren:<br> "${oldComment}"<br> -${oldName.italics()}`;
 
     if (oldName && oldComment ==! null) {
         comments.style.display = "none";
