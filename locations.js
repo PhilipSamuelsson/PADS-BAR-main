@@ -81,18 +81,20 @@ yourName.addEventListener('keydown', (event) => {
 
       form2.addEventListener('submit', (event) => {
         event.preventDefault();
-        localStorage.setItem('yourName', yourName.value);
-        localStorage.setItem('comment', comment.value);
+        let q = localStorage.setItem('yourName', yourName.value);
+        let w = localStorage.setItem('comment', comment.value);
+
+
+
         yourName.value = '';
         comment.value = '';
         anonym.checked = false;
         post.disabled = true;
 
-        localStorage.setItem('comments', comments.value);
-        comments.value.innerHTML = localStorage.getItem('comments')
+     }
+     )
 
-     })
-
+     //getitem här??
     post.addEventListener('click', () => {
         let commentBox = document.querySelector(".comment").value;
         let div = document.createElement("div");
@@ -100,27 +102,29 @@ yourName.addEventListener('keydown', (event) => {
         div.appendChild(text);
         document.querySelector("#comments").appendChild(div);
         div.style.backgroundColor = "grey";
-        div.style.height = "10vh";
-         div.style.padding = "0.5rem";
+        div.style.height = "15vh";
+         div.style.padding = "1rem";
         div.style.margin = "1rem";
         div.style.borderRadius = "10px";
         if (anonym.checked == false) {
-        div.innerHTML = `${yourName.value}:<br> ${comment.value}`
+            ita = document.querySelector(".your-name").value;
+        div.innerHTML = `"${comment.value}"<br>-${ita.italics()}`
         } else {
-            div.innerHTML = `Anonym: ${comment.value}`
-        }
-
-    })
-
-/*     let showInput = () => {
-        let usersInput = document.querySelector(".comment").value;
-        setDataToLocalStorage(usersInput);
-        document.querySelector("#comments").innerHTML = usersInput;
+            div.innerHTML = `"${comment.value}"<br>-Anonym`
     }
-    showInput(); */
-/*
-    localStorage.getItem('yourName');
-    console.log(localStorage.getItem('yourName')); */
+    }
+    )
+
+    let oldName = localStorage.getItem('yourName', yourName.value);
+    let oldComment = localStorage.getItem('comment');
+    let lastComment = document.querySelector(".lastComment");
+    lastComment.innerHTML = `Senaste kommentaren:<br>"${oldComment}"<br>-${oldName}`;
+
+    if (oldName && oldComment ==! null) {
+        comments.style.display = "none";
+    } else {
+        comments.style.display = "grid";
+    }
 
     //Charts
     fetch('chart.json')

@@ -629,25 +629,43 @@ line-height: 25px;
         text-decoration: none;
         border-top: 50px solid black;
         text-align: center;
-        padding: 0.5rem 1rem;
+        padding: 4rem 2rem;
+        padding-bottom: 4rem;
     }
 
     #comments {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+         grid-template-columns: 1fr 1fr 1fr;
         width: 90%;
         margin: 0 auto;
+
+        margin-bottom: 30vh;
+        margin-top: 5vh;
     }
 
+    .lastComment {
+   background-color: grey;
+   padding: 1rem;
+   margin: 1rem;
+   border-radius: 10px;
+   height: 15vh;
+    }
+
+/*     div.style.backgroundColor = "grey";
+    div.style.height = "10vh";
+     div.style.padding = "0.5rem";
+    div.style.margin = "1rem";
+    div.style.borderRadius = "10px"; */
     .form2-2 {
         text-align: center;
         background-color: grey;
         width: 90%;
         margin: 0 auto;
+        /* margin-bottom: 20vh; */
     }
 
     .post {
-    margin: 1rem;
+    margin-bottom: 3rem;
     padding: 0.5rem 1rem;
     }
 
@@ -660,7 +678,9 @@ line-height: 25px;
     }
 
     .comment {
-        margin-top: 1rem;
+        width: 33%;
+        margin: 3rem;
+        padding: 0.3rem;
     }
 
     /*Chart*/
