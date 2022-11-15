@@ -1,39 +1,15 @@
     /* LOCATIONS */
 
-/*   city1 = document.getElementsByClassName('city1')
-      city2 = document.getElementsByClassName('city2')
-            city3 = document.getElementsByClassName('city3')
-            city4 = document.getElementsByClassName('city4')
-            city5 = document.getElementsByClassName('city5')
-           city6 = document.getElementsByClassName('city6')
 
-    let getLocations = () => {
-        fetch('https://avancera.app/cities/')
-        .then (response => response.json())
-        .then (data => {
-        citiesArray = data
-            console.log(citiesArray)
-            city1.innerHTML = citiesArray[0].name
-            city2.innerHTML = citiesArray[1].name
-            city3.innerHTML = citiesArray[2].name
-            city4.innerHTML = citiesArray[3].name
-            city5.innerHTML = citiesArray[4].name
-            city6.innerHTML = citiesArray[5].name
-            })
-        } */
-/* getLocations() */
-     console.log("hai")
 
      fetch(`https://avancera.app/cities/`)
 .then (response => response.json())
 .then (data => {
     for(let i = 0; i < 3; i++) {
-     document.querySelector(".city1").innerHTML = data[2].name;
 
         let c = data[i].name;
         data.push(c);
-        console.log(c)
-        console.log(data[0].name)
+
 
         document.querySelector(".city1").innerHTML = data[0].name;
         document.querySelector(".city2").innerHTML = data[1].name;
@@ -52,6 +28,8 @@ let post = document.querySelector(".post");
 let comment = document.querySelector(".comment");
 let yourName = document.querySelector(".your-name");
 let comments = document.querySelector("#comments");
+
+
 post.disabled = true;
 
 
@@ -62,6 +40,7 @@ anonym.addEventListener('click', () => {
         post.disabled = true;
     }
 })
+
 yourName.addEventListener('keydown', (event) => {
     let key = event.key;
     post.disabled = true;
@@ -71,30 +50,16 @@ yourName.addEventListener('keydown', (event) => {
      post.disabled = false;
      }})
 
-/*      comment.addEventListener('keydown', () => {
-        if (comment.value.length > 0){
-            post.disabled = false
-        } else {
-            post.disabled = true;
-        }
-     }) */
-
       form2.addEventListener('submit', (event) => {
         event.preventDefault();
-        let q = localStorage.setItem('yourName', yourName.value);
-        let w = localStorage.setItem('comment', comment.value);
-
-
-
+        localStorage.setItem('yourName', yourName.value);
+        localStorage.setItem('comment', comment.value);
         yourName.value = '';
         comment.value = '';
         anonym.checked = false;
         post.disabled = true;
+     })
 
-     }
-     )
-
-     //getitem här??
     post.addEventListener('click', () => {
         let commentBox = document.querySelector(".comment").value;
         let div = document.createElement("div");
@@ -111,15 +76,16 @@ yourName.addEventListener('keydown', (event) => {
         div.innerHTML = `"${comment.value}"<br>-${ita.italics()}`
         } else {
             div.innerHTML = `"${comment.value}"<br>-Anonym`
-    }
-    }
-    )
+    }})
 
     let oldName = localStorage.getItem('yourName', yourName.value);
     let oldComment = localStorage.getItem('comment');
     let lastComment = document.querySelector(".lastComment");
+    if (anonym == false) {
     lastComment.innerHTML = `Senaste kommentaren:<br> "${oldComment}"<br> -${oldName.italics()}`;
-
+    } else {
+        lastComment.innerHTML = `Senaste kommentaren:<br> "${oldComment}"<br> -Anonym`
+    }
     if (oldName && oldComment ==! null) {
         comments.style.display = "none";
     } else {

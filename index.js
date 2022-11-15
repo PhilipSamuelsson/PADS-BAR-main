@@ -99,7 +99,6 @@ let getLocations = () => {
     .then (response => response.json())
     .then (data => {
     citiesArray = data
-        console.log('hej')
         document.getElementsByClassName('city1').innerHTML = citiesArray[0].name
         document.getElementsByClassName('city2').innerHTML = citiesArray[1].name
         document.getElementsByClassName('city3').innerHTML = citiesArray[2].name
@@ -182,14 +181,16 @@ fetch('chart.json')
             }
         }
     });
-    let sum = data.reduce((a, b) => a + b, 0);
     //antal röster
+    let sum = data.reduce((a, b) => a + b, 0);
+
      let a = data[0];
     let b = data[1];
     let c = data[2];
     let d = data[3];
     let e = data[4];
     console.log(sum)
+    //snittbetyg
     let avg = (a*1 + b*2 + c*3 + d*4 + e*5) / sum;
     let avgRounded = Math.round(avg * 10) / 10;
     document.querySelector(".avg").innerHTML = avgRounded + "/5"
