@@ -57,7 +57,7 @@ let alcoholic = () => {
 
             })
         }
-    /* alcoholic() */
+
     let btn1 = document.querySelector("#alcoholic");
     let btn2 = document.querySelector("#non-alcoholic");
 

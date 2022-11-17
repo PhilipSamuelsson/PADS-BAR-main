@@ -21,14 +21,14 @@ console.log(data)
 
 })
 
-/*Formulär recensioner*/
+/*form recensioner*/
 let form2 = document.querySelector(".form2");
 let anonym = document.querySelector(".opt");
 let post = document.querySelector(".post");
 let comment = document.querySelector(".comment");
 let yourName = document.querySelector(".your-name");
 let comments = document.querySelector("#comments");
-
+let lastComment = document.querySelector(".lastComment");
 
 post.disabled = true;
 
@@ -60,6 +60,7 @@ yourName.addEventListener('keydown', (event) => {
         post.disabled = true;
      })
 
+     /*creating new element*/
     post.addEventListener('click', () => {
         let commentBox = document.querySelector(".comment").value;
         let div = document.createElement("div");
@@ -71,6 +72,7 @@ yourName.addEventListener('keydown', (event) => {
          div.style.padding = "1rem";
         div.style.margin = "1rem";
         div.style.borderRadius = "10px";
+
         if (anonym.checked == false) {
             ita = document.querySelector(".your-name").value;
         div.innerHTML = `"${comment.value}"<br>-${ita.italics()}`
@@ -78,19 +80,23 @@ yourName.addEventListener('keydown', (event) => {
             div.innerHTML = `"${comment.value}"<br>-Anonym`
     }})
 
-    let oldName = localStorage.getItem('yourName', yourName.value);
+
+    /*last comment*/
+    let oldName = localStorage.getItem('yourName');
     let oldComment = localStorage.getItem('comment');
-    let lastComment = document.querySelector(".lastComment");
-    if (anonym == false) {
-    lastComment.innerHTML = `Senaste kommentaren:<br> "${oldComment}"<br> -${oldName.italics()}`;
-    } else {
+
+    if (anonym.checked == false && oldName !== null) {
+    lastComment.innerHTML = `Senaste kommentaren:<br><br> "${oldComment}"<br> -${oldName.italics()}`;
+
+    } else if (anonym.checked == true && oldName !== null) {
         lastComment.innerHTML = `Senaste kommentaren:<br> "${oldComment}"<br> -Anonym`
+    } else if (oldName === null) {
+        lastComment.style.display = "none"
     }
-    if (oldName && oldComment ==! null) {
-        comments.style.display = "none";
-    } else {
-        comments.style.display = "grid";
-    }
+
+     /* localStorage.clear(); */
+
+
 
     //Charts
     fetch('chart.json')
@@ -112,7 +118,7 @@ yourName.addEventListener('keydown', (event) => {
             data: {
                 labels: labels,
                 datasets: [{
-                    label: '# of Votes',
+                    label: 'Antal röster',
                     data: data,
                     backgroundColor: [
                         'rgba(150, 200, 200, 0.6)',
